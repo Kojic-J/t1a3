@@ -1,20 +1,16 @@
 # list of apple products
-from product import Product
+from products import Device
 
 
-class Products:
+class device_list:
     def __init__(self, products):
         self.products = products
 
+    def print_products(self):
+        print("These are the Apple products we can recommend! Feel free to add more!")
+        for item in self.products:
+            item.print_product()
 
-def print_products(self):
-    print("These are the Apple products we can recommend! Feel free to add more!")
-    for item in self.products:
-        item.print_product()
-
-
-iPhone12 = Product("iPhone 12", 1199)
-iPhone12big = Product("iPhone 12", 1199)
-
-products = Products((iPhone12, iPhone12big))
-Products.print_products()
+    def add_device(self, name, price, storage, colour):
+        new_device = Device(name, price, storage, colour)
+        self.products.append(new_device)
