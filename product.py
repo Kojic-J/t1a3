@@ -7,8 +7,8 @@ class Product:
         self.colour = colour
 
     def print_product(self):
-        print(f"{self.name} ${self.price}")
+        print(f"{self.name}: ${self.price}: {self.storage}: {self.colour}")
 
 
-iPhone12 = Product("iPhone 12", 1199)
-print(iPhone12.print_product())
+iPhone12 = Product("iPhone 12", 1199, "64GB", "Grey")
+iPhone12.print_product()
