@@ -1,4 +1,3 @@
-# list of apple products
 from products import Device
 
 
@@ -14,3 +13,12 @@ class device_list:
     def add_device(self, name, price, storage, colour):
         new_device = Device(name, price, storage, colour)
         self.products.append(new_device)
+
+    def delete_device(self, name):
+        for item in self.products:
+            if item.name == name:
+                self.products.remove(item)
+                return print(f"{name} removed successfully")
+        return print(f"{name} does not exist on the list yet! Try adding the device.")
+
+# add boolean do you like your new device?

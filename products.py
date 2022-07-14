@@ -1,5 +1,4 @@
 class Device:
-    # name, price, colour
     def __init__(self, name, price, storage, colour):
         self.name = name
         self.price = price
@@ -10,5 +9,5 @@ class Device:
         print(f"{self.name}: ${self.price}: {self.storage}: {self.colour}")
 
 
-iPhone12 = Device("iPhone 12", 1199, "64GB", "Grey", "Yes")
+iPhone12 = Device("iPhone 12", 1199, "64GB", "Grey")
 iPhone12.print_product()
